@@ -1,0 +1,30 @@
+@server = http://localhost:3000
+
+#글 조회
+GET {{server}}/blog
+
+###글 생성
+POST {{server}}/blog
+Content-Type: application/json
+
+{
+    "title": "안녕하세요",
+    "content": "처음 인사드립니다.",
+    "name": "이름"
+}
+
+###특정 글 조회
+GET {{server}}/blog/<게시글ID>
+
+###글 삭제
+DELETE {{server}}/blog/<게시글ID>
+
+###글 수정
+PUT {{server}}/blog/<게시글ID>
+Content-Type: application/json
+
+{
+    "title": "안녕히가세요",
+    "content": "두번째 인사드립니다.",
+    "name": "성명"
+}
